@@ -312,6 +312,10 @@ body::before {
 /* =============================================
      ปุ่มกดในเกม
      ============================================= */
+
+.button{
+    touch-action: manipulation;
+}
 .buttons-wrap {
     width: 100%;
     display: flex;
