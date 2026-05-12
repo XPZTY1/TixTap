@@ -77,7 +77,7 @@
   {
     "id": 6,
     "level": "easy",
-    "text": "<span class='highlight'>อย่า</span>กดปุ่มเลย แล้วกด ✔ ยืนยัน",
+    "text": "<span class='highlight'>อย่า</span>กดปุ่ม",
     "buttons": [
       "single"
     ],
@@ -107,7 +107,7 @@
   {
     "id": 8,
     "level": "easy",
-    "text": "กดปุ่ม <span class='highlight'>น้อยกว่า 4 ครั้ง</span> (แต่อย่างน้อย 1)",
+    "text": "กดปุ่ม <span class='highlight'>น้อยกว่า 4 ครั้ง</span>",
     "buttons": [
       "single"
     ],
@@ -123,7 +123,7 @@
   {
     "id": 9,
     "level": "easy",
-    "text": "กดปุ่ม <span class='highlight'>เลขคู่</span> ครั้ง (2 หรือ 4)",
+    "text": "กดปุ่ม <span class='highlight'>เลขคู่</span> ครั้ง",
     "buttons": [
       "single"
     ],
@@ -150,7 +150,7 @@
   {
     "id": 10,
     "level": "easy",
-    "text": "กดปุ่ม <span class='highlight'>เลขคี่</span> ครั้ง (1, 3 หรือ 5)",
+    "text": "กดปุ่ม <span class='highlight'>เลขคี่</span> ครั้ง",
     "buttons": [
       "single"
     ],
@@ -259,7 +259,7 @@
   {
     "id": 16,
     "level": "mid",
-    "text": "<span class='highlight'>อย่า</span>กดขวาเลย (กดซ้ายได้)",
+    "text": "<span class='highlight'>อย่า</span>กดขวาเลย",
     "buttons": [
       "left",
       "right"
@@ -471,7 +471,7 @@
   {
     "id": 26,
     "level": "hard",
-    "text": "<span class='highlight'>อย่า</span>กดบนหรือล่างเลย กดซ้าย/ขวาได้",
+    "text": "<span class='highlight'>อย่า</span>กดบนหรือล่างเลย",
     "buttons": [
       "left",
       "right",
@@ -566,7 +566,7 @@
   {
     "id": 30,
     "level": "hard",
-    "text": "กดแต่ละปุ่ม <span class='highlight'>ต่างกันทั้งหมด</span> (ไม่มีค่าซ้ำ และทุกปุ่ม > 0)",
+    "text": "กดแต่ละปุ่ม <span class='highlight'>ต่างกันทั้งหมด</span>",
     "buttons": [
       "left",
       "right",
