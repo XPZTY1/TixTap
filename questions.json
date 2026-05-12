@@ -17,66 +17,6 @@
   {
     "id": 2,
     "level": "easy",
-    "text": "กดปุ่ม <span class='highlight'>3 ครั้ง</span>",
-    "buttons": [
-      "single"
-    ],
-    "time": 5,
-    "condition": {
-      "type": "exact",
-      "key": "single",
-      "value": 3
-    },
-    "hint": "ต้องกด 3 ครั้งพอดี"
-  },
-  {
-    "id": 3,
-    "level": "easy",
-    "text": "กดปุ่ม <span class='highlight'>5 ครั้ง</span>",
-    "buttons": [
-      "single"
-    ],
-    "time": 5,
-    "condition": {
-      "type": "exact",
-      "key": "single",
-      "value": 5
-    },
-    "hint": "ต้องกด 5 ครั้งพอดี"
-  },
-  {
-    "id": 4,
-    "level": "easy",
-    "text": "กดปุ่ม <span class='highlight'>2 ครั้ง</span>",
-    "buttons": [
-      "single"
-    ],
-    "time": 5,
-    "condition": {
-      "type": "exact",
-      "key": "single",
-      "value": 2
-    },
-    "hint": "ต้องกด 2 ครั้งพอดี"
-  },
-  {
-    "id": 5,
-    "level": "easy",
-    "text": "กดปุ่ม <span class='highlight'>4 ครั้ง</span>",
-    "buttons": [
-      "single"
-    ],
-    "time": 5,
-    "condition": {
-      "type": "exact",
-      "key": "single",
-      "value": 4
-    },
-    "hint": "ต้องกด 4 ครั้งพอดี"
-  },
-  {
-    "id": 6,
-    "level": "easy",
     "text": "<span class='highlight'>อย่า</span>กดปุ่ม",
     "buttons": [
       "single"
@@ -90,7 +30,7 @@
     "hint": "ห้ามกดปุ่มเลย!"
   },
   {
-    "id": 7,
+    "id": 3,
     "level": "easy",
     "text": "กดปุ่มให้ <span class='highlight'>มากกว่า 2 ครั้ง</span>",
     "buttons": [
@@ -105,7 +45,7 @@
     "hint": "ต้องกดอย่างน้อย 3 ครั้ง"
   },
   {
-    "id": 8,
+    "id": 4,
     "level": "easy",
     "text": "กดปุ่ม <span class='highlight'>น้อยกว่า 4 ครั้ง</span>",
     "buttons": [
@@ -121,7 +61,7 @@
     "hint": "กด 1, 2 หรือ 3 ครั้ง"
   },
   {
-    "id": 9,
+    "id": 5,
     "level": "easy",
     "text": "กดปุ่ม <span class='highlight'>เลขคู่</span> ครั้ง",
     "buttons": [
@@ -138,17 +78,23 @@
     },
     "hint": "กด 2 หรือ 4 ครั้ง"
   },
-
-
-
-
-
-
-
-
-
   {
-    "id": 10,
+    "id": 6,
+    "level": "easy",
+    "text": "<span class='highlight'>1+1</span> ครั้ง",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 2
+    },
+    "hint": "กด 2 หรือ 4 ครั้ง"
+  },
+  {
+    "id": 7,
     "level": "easy",
     "text": "กดปุ่ม <span class='highlight'>เลขคี่</span> ครั้ง",
     "buttons": [
@@ -167,62 +113,8 @@
     "hint": "กด 1, 3 หรือ 5 ครั้ง"
   },
   {
-    "id": 11,
-    "level": "mid",
-    "text": "กด <span class='highlight'>ซ้าย 2 ครั้ง</span>",
-    "buttons": [
-      "left",
-      "right"
-    ],
-    "time": 4,
-    "condition": {
-      "type": "multi_exact",
-      "keys": {
-        "left": 2,
-        "right": 0
-      }
-    },
-    "hint": "กดซ้าย 2 ครั้ง อย่ากดขวา"
-  },
-  {
-    "id": 12,
-    "level": "mid",
-    "text": "กด <span class='highlight'>ขวา 3 ครั้ง</span>",
-    "buttons": [
-      "left",
-      "right"
-    ],
-    "time": 4,
-    "condition": {
-      "type": "multi_exact",
-      "keys": {
-        "left": 0,
-        "right": 3
-      }
-    },
-    "hint": "กดขวา 3 ครั้ง อย่ากดซ้าย"
-  },
-  {
-    "id": 13,
-    "level": "mid",
-    "text": "กด <span class='highlight'>ซ้าย 1 ครั้ง แล้วขวา 1 ครั้ง</span>",
-    "buttons": [
-      "left",
-      "right"
-    ],
-    "time": 4,
-    "condition": {
-      "type": "multi_exact",
-      "keys": {
-        "left": 1,
-        "right": 1
-      }
-    },
-    "hint": "กดซ้าย 1 และขวา 1 ครั้ง"
-  },
-  {
-    "id": 14,
-    "level": "mid",
+    "id": 8,
+    "level": "easy",
     "text": "กด <span class='highlight'>ขวามากกว่าซ้าย</span>",
     "buttons": [
       "left",
@@ -237,10 +129,29 @@
     },
     "hint": "จำนวนขวาต้องมากกว่าซ้าย"
   },
+
+
+
+  
   {
-    "id": 15,
+    "id": 9,
     "level": "mid",
-    "text": "กดซ้ายและขวา <span class='highlight'>รวมกันได้ 4</span>",
+    "text": "จำนวน<span class='highlight'>ขาหมาลบกับขาคน</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 4,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 2
+    },
+    "hint": "2 ขาสิอิ๊โง๊ววว"
+  },
+  {
+    "id": 10,
+    "level": "mid",
+    "text": "กดซ้ายและขวา <span class='highlight'>รวมกันได้ 6</span>",
     "buttons": [
       "left",
       "right"
@@ -252,12 +163,12 @@
         "left",
         "right"
       ],
-      "value": 4
+      "value": 6
     },
-    "hint": "ซ้าย + ขวา = 4"
+    "hint": "ซ้าย + ขวา = 6"
   },
   {
-    "id": 16,
+    "id": 11,
     "level": "mid",
     "text": "<span class='highlight'>อย่า</span>กดขวาเลย",
     "buttons": [
@@ -274,7 +185,7 @@
     "hint": "ห้ามกดขวา กดซ้ายอย่างน้อย 1"
   },
   {
-    "id": 17,
+    "id": 12,
     "level": "mid",
     "text": "กด <span class='highlight'>ซ้าย 3 ครั้ง ขวา 2 ครั้ง</span>",
     "buttons": [
@@ -292,69 +203,91 @@
     "hint": "ซ้าย = 3, ขวา = 2"
   },
   {
-    "id": 18,
+    "id": 13,
     "level": "mid",
-    "text": "กดซ้ายและขวา <span class='highlight'>ให้เท่ากัน</span>",
+    "text": "จำนวน<span class='highlight'>ขาแมงมุม</span>",
     "buttons": [
-      "left",
-      "right"
+      "single"
     ],
-    "time": 4,
+    "time": 5,
     "condition": {
-      "type": "equal_keys",
-      "keys": [
-        "left",
-        "right"
-      ],
-      "minEach": 1
+      "type": "exact",
+      "key": "single",
+      "value":8
     },
-    "hint": "ซ้าย = ขวา (อย่างน้อย 1 ครั้ง)"
+    "hint": "แมงมุมมี 8 ขานะ"
   },
   {
-    "id": 19,
+    "id": 14,
     "level": "mid",
-    "text": "กดรวม <span class='highlight'>ได้ 6 พอดี</span>",
+    "text": "จำนวน<span class='highlight'>มุมวงกลม</span>",
     "buttons": [
-      "left",
-      "right"
+      "single"
     ],
-    "time": 4,
+    "time": 5,
     "condition": {
-      "type": "sum_exact",
-      "keys": [
-        "left",
-        "right"
-      ],
-      "value": 6
+      "type": "exact",
+      "key": "single",
+      "value": 0
     },
-    "hint": "ซ้าย + ขวา = 6"
+    "hint": "วงกลมไม่มีมุมโว้ย"
   },
-
-
+  {
+    "id": 15,
+    "level": "mid",
+    "text": "จำนวน<span class='highlight'>มุมรูปดาว</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 10
+      
+    },
+    "hint": "วงกลมไม่มีมุมโว้ย"
+  },
+  {
+    "id": 16,
+    "level": "mid",
+    "text": "จำนวน<span class='highlight'>เดือนทั้งหมดลบ1</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 11
+    },
+    "hint": "12 - 1 ไง"
+  },
 
 
 
 
   
   {
-    "id": 20,
-    "level": "mid",
-    "text": "กด <span class='highlight'>ซ้ายมากกว่าขวา 2 ครั้ง</span>",
+    "id": 17,
+    "level": "hard",
+    "text": "ซ้าย<span class='highlight'>ขาคน</span> ขวา<span class='highlight'>ขาหมา</span>",
     "buttons": [
       "left",
       "right"
     ],
     "time": 4,
     "condition": {
-      "type": "diff_exact",
-      "keyA": "left",
-      "keyB": "right",
-      "value": 2
+      "type": "multi_exact",
+      "keys": {
+        "left": 2,
+        "right": 4
+      }
     },
-    "hint": "ซ้าย − ขวา = 2"
+    "hint": "ตอบไม่ได้หรอมีกี่ขา"
   },
   {
-    "id": 21,
+    "id": 18,
     "level": "hard",
     "text": "กด <span class='highlight'>บน 2 ครั้ง ล่าง 1 ครั้ง</span> ไม่กดอื่น",
     "buttons": [
@@ -376,9 +309,9 @@
     "hint": "บน=2, ล่าง=1, ซ้าย=0, ขวา=0"
   },
   {
-    "id": 22,
+    "id": 19,
     "level": "hard",
-    "text": "กดให้ <span class='highlight'>ซ้าย+ขวา = บน+ล่าง</span>",
+    "text": "กดให้ <span class='highlight'>ซ้าย+ขวา > บน+ล่าง</span>",
     "buttons": [
       "left",
       "right",
@@ -387,7 +320,7 @@
     ],
     "time": 3,
     "condition": {
-      "type": "sum_equal_groups",
+      "type": "sum_compare_gt",
       "groupA": [
         "left",
         "right"
@@ -398,11 +331,11 @@
       ],
       "minTotal": 1
     },
-    "hint": "รวมซ้าย+ขวา ต้องเท่ากับ บน+ล่าง"
+    "hint": "รวมซ้าย+ขวา ต้องมากกว่า บน+ล่าง"
   },
   {
-    "id": 23,
-    "level": "hard",
+    "id": 20,
+    "level": "easy",
     "text": "กด <span class='highlight'>ทุกปุ่มอย่างน้อย 1 ครั้ง</span>",
     "buttons": [
       "left",
@@ -424,29 +357,7 @@
     "hint": "ทุกปุ่มต้องกดอย่างน้อย 1 ครั้ง"
   },
   {
-    "id": 24,
-    "level": "hard",
-    "text": "กด <span class='highlight'>บนให้มากที่สุด</span>",
-    "buttons": [
-      "left",
-      "right",
-      "up",
-      "down"
-    ],
-    "time": 3,
-    "condition": {
-      "type": "key_max",
-      "key": "up",
-      "others": [
-        "left",
-        "right",
-        "down"
-      ]
-    },
-    "hint": "บนต้องมากกว่าทุกปุ่มอื่น"
-  },
-  {
-    "id": 25,
+    "id": 21,
     "level": "hard",
     "text": "กดรวม <span class='highlight'>ทุกปุ่มได้ 5 พอดี</span>",
     "buttons": [
@@ -469,8 +380,8 @@
     "hint": "รวมทุกปุ่ม = 5"
   },
   {
-    "id": 26,
-    "level": "hard",
+    "id": 22,
+    "level": "mid",
     "text": "<span class='highlight'>อย่า</span>กดบนหรือล่างเลย",
     "buttons": [
       "left",
@@ -494,8 +405,8 @@
     "hint": "บน=0, ล่าง=0, กดซ้ายหรือขวา"
   },
   {
-    "id": 27,
-    "level": "hard",
+    "id": 23,
+    "level": "mid",
     "text": "กด <span class='highlight'>ล่าง 3 ครั้ง</span> ไม่กดปุ่มอื่น",
     "buttons": [
       "left",
@@ -516,8 +427,8 @@
     "hint": "ล่าง=3, ปุ่มอื่น=0"
   },
   {
-    "id": 28,
-    "level": "hard",
+    "id": 24,
+    "level": "mid",
     "text": "กด <span class='highlight'>ซ้ายและบนให้เท่ากัน</span> ไม่กดขวา/ล่าง",
     "buttons": [
       "left",
@@ -541,8 +452,8 @@
     "hint": "ซ้าย = บน, ขวา=0, ล่าง=0"
   },
   {
-    "id": 29,
-    "level": "hard",
+    "id": 25,
+    "level": "mid",
     "text": "กดรวม <span class='highlight'>ทุกปุ่มได้ 8 พอดี</span>",
     "buttons": [
       "left",
@@ -564,7 +475,7 @@
     "hint": "รวมทุกปุ่ม = 8"
   },
   {
-    "id": 30,
+    "id": 26,
     "level": "hard",
     "text": "กดแต่ละปุ่ม <span class='highlight'>ต่างกันทั้งหมด</span>",
     "buttons": [
@@ -584,5 +495,65 @@
       ]
     },
     "hint": "ซ้าย≠ขวา≠บน≠ล่าง และทุกปุ่ม > 0"
+  },
+  {
+    "id": 27,
+    "level": "mid",
+    "text": "จำนวน <span class='highlight'>วันจันทร์ในหนึ่งสัปดาห์</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 1
+    },
+    "hint": "ต้องกด 1 ครั้งพอดี"
+  },
+  {
+    "id": 28,
+    "level": "hard",
+    "text": "<span class='highlight'>76-67</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 9
+    },
+    "hint": "76 - 67 'ง่ายๆ"
+  },
+  {
+    "id": 29,
+    "level": "hard",
+    "text": "<span class='highlight'>76-67</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 9
+    },
+    "hint": "76 - 67 'ง่ายๆ"
+  },
+  {
+    "id": 30,
+    "level": "hard",
+    "text": "จำนวน<span class='highlight'>ขาคนลบขางู</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 2
+    },
+    "hint": "งูมีขาหรอ"
   }
 ]
