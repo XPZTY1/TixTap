@@ -12,6 +12,11 @@
 
 <body>
   <div id="app">
+    <audio id="click" src="sound/click.mp3"></audio>
+    <audio id="click-play" src="sound/click-play.mp3"></audio>
+    <audio id="click-play" src="sound/click-play.mp3"></audio>
+    <audio id="correct" src="sound/correct.mp3"></audio>
+    <audio id="incorrect" src="sound/incorrect.mp3"></audio>
 
     <!-- ==================== START SCREEN ==================== -->
     <div class="screen active" id="screen-start">
@@ -40,6 +45,7 @@
       </div>
 
       <button class="btn-primary" onclick="startGame()">▶ เริ่มเกม</button>
+      
     </div>
 
     <!-- ==================== GAME SCREEN ==================== -->
@@ -90,6 +96,7 @@
       <div class="result-sub" id="result-sub"></div>
       <div class="result-score" id="result-score"></div>
       <button class="btn-primary" id="result-btn" onclick="handleResultBtn()"></button>
+      <button class="btn-primary" id="result-btnH" onclick="location.reload()"></button>
     </div>
   </div>
 

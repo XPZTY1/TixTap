@@ -173,6 +173,7 @@ body::before {
     cursor: pointer;
     transition: opacity .15s, transform .1s;
     letter-spacing: 1px;
+    margin: 5px;
 }
 
 .btn-primary:hover {

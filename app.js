@@ -76,6 +76,7 @@ function startGame() {
     hideOverlay();
     showScreen('screen-game');
     loadLevel();
+    ClickPlaySound();
 }
 
 /* ============================================================
@@ -215,6 +216,7 @@ function pressBtn(key) {
         el.style.transform = 'scale(1.4)';
         setTimeout(() => el.style.transform = 'scale(1)', 120);
     }
+    clickOn();
 }
 
 /* ============================================================
@@ -404,11 +406,14 @@ function showResult(win, q) {
         document.getElementById('result-sub').innerHTML =
             `ด่าน ${state.level} ผ่านแล้ว! ไปด่าน ${state.level + 1} กันเลย`;
         document.getElementById('result-btn').textContent = '▶ ด่านต่อไป';
+        correctSound();
         state.resultAction = 'next';
     } else {
+        incorrectSound();
         document.getElementById('result-sub').innerHTML =
             `คำตอบผิด! <br><small style="color:var(--mid)">💡 ${q.hint}</small>`;
         document.getElementById('result-btn').textContent = '🔄 เริ่มใหม่';
+        document.getElementById('result-btnH').textContent = '⏹️ กลับหน้าแรก';
         state.resultAction = 'restart';
 
         // Animation สั่นเมื่อแพ้
@@ -416,6 +421,7 @@ function showResult(win, q) {
         box.classList.remove('shake');
         void box.offsetWidth; // force reflow
         box.classList.add('shake');
+        
     }
 
     document.getElementById('result-overlay').classList.add('show');
@@ -473,6 +479,40 @@ function updateRulesTime() {
     document.getElementById("time-mid").textContent = TIME_CONFIG.mid;
     document.getElementById("time-hard").textContent = TIME_CONFIG.hard;
 }
+
+
+
+
+/* ============================================================
+   เล่นเสียง
+   ============================================================ */
+
+
+function clickOn() {
+    const click = document.getElementById("click");
+    click.currentTime = 0.35;
+    click.play();
+}
+
+
+function ClickPlaySound() {
+    const click_play = document.getElementById("click-play");
+    click_play.currentTime = 0.45;
+    click_play.play();
+}
+
+function incorrectSound() {
+    const incorrect = document.getElementById("incorrect");
+    incorrect.currentTime = 0;
+    incorrect.play();
+}
+
+function correctSound() {
+    const correct = document.getElementById("correct");
+    correct.currentTime = 0;
+    correct.play();
+}
+
 
 /* ============================================================
    โหลดคำถามทันทีที่หน้าเว็บพร้อม
