@@ -47,6 +47,7 @@ async function loadQuestions() {
         QUESTIONS = await res.json();
         console.log(`โหลดคำถามสำเร็จ: ${QUESTIONS.length} ข้อ`);
         updateRulesTime(); // อัปเดตเวลาใน rules box ให้ตรงกับ TIME_CONFIG
+        document.getElementById('all-level').textContent = `${TOTAL_LEVELS}`;
     } catch (err) {
         console.error('โหลด questions.json ไม่สำเร็จ:', err);
         alert('ไม่พบไฟล์ questions.json กรุณาวางไฟล์ไว้ในโฟลเดอร์เดียวกัน');
@@ -450,6 +451,7 @@ function hideOverlay() {
 function showWin() {
     clearTimer();
     document.getElementById('win-score-text').textContent = `คะแนนรวม: ${state.score} คะแนน`;
+    document.getElementById('all-level').textContent = `${TOTAL_LEVELS}`;
     showScreen('screen-win');
 }
 
