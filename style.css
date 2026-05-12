@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700;900&family=Space+Mono:wght@700&display=swap');
+
+/* =============================================
+     CSS Variables — แก้ที่นี่เพื่อเปลี่ยน theme
+     ============================================= */
+:root {
+    --bg: #07070f;
+    --panel: #0f0f1a;
+    --border: #1a1a2e;
+    --easy: #00e5a0;
+    --mid: #ffb800;
+    --hard: #ff3d6e;
+    --white: #eeeef8;
+    --dim: #44446a;
+    --btn-left: #3b82f6;
+    --btn-right: #a855f7;
+    --btn-up: #22d3ee;
+    --btn-down: #f97316;
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    font-family: 'Prompt', sans-serif;
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* พื้นหลังลายตาราง */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .018) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+}
+
+/* =============================================
+     Layout หลัก
+     ============================================= */
+#app {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Screen base — ซ่อนทุก screen แล้วแสดงเฉพาะ .active */
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeUp .35s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =============================================
+     START SCREEN
+     ============================================= */
+.logo {
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    text-align: center;
+}
+
+.logo span {
+    color: var(--easy);
+}
+
+.logo .sub {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: var(--dim);
+    margin-top: 6px;
+}
+
+.rules-box {
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    line-height: 1.9;
+    font-size: .92rem;
+    color: #aaaacc;
+}
+
+.rules-box strong {
+    color: var(--white);
+}
+
+.badge-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.badge.easy {
+    background: rgba(0, 229, 160, .15);
+    color: var(--easy);
+    border: 1px solid rgba(0, 229, 160, .3);
+}
+
+.badge.mid {
+    background: rgba(255, 184, 0, .15);
+    color: var(--mid);
+    border: 1px solid rgba(255, 184, 0, .3);
+}
+
+.badge.hard {
+    background: rgba(255, 61, 110, .15);
+    color: var(--hard);
+    border: 1px solid rgba(255, 61, 110, .3);
+}
+
+/* =============================================
+     ปุ่มหลัก (สีเขียว)
+     ============================================= */
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: var(--easy);
+    color: #07070f;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity .15s, transform .1s;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    opacity: .88;
+}
+
+.btn-primary:active {
+    transform: scale(.97);
+}
+
+/* =============================================
+     GAME SCREEN — HUD
+     ============================================= */
+.hud {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .85rem;
+    color: var(--dim);
+    font-family: 'Space Mono', monospace;
+}
+
+.hud-level {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.hud-score {
+    color: var(--easy);
+}
+
+/* Countdown bar */
+.timer-wrap {
+    width: 100%;
+    height: 8px;
+    background: var(--border);
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+#timer-bar {
+    height: 100%;
+    width: 100%;
+    border-radius: 99px;
+    background: var(--easy);
+    transform-origin: left;
+    transition: background .3s;
+}
+
+/* =============================================
+     กล่องแสดงคำสั่ง
+     ============================================= */
+.instruction-box {
+    width: 100%;
+    min-height: 120px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.instruction-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: .06;
+    background: radial-gradient(circle at 50% 0%, white, transparent 70%);
+}
+
+#instruction-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+/* สีไฮไลท์ในคำสั่ง */
+#instruction-text .highlight {
+    color: var(--easy);
+}
+
+#level-badge {
+    font-size: .75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 99px;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+
+/* =============================================
+     Counter แสดงจำนวนที่กด
+     ============================================= */
+.counters {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.counter-item {
+    flex: 1;
+    min-width: 80px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 8px;
+    text-align: center;
+    transition: border-color .15s;
+}
+
+.counter-item .c-label {
+    font-size: .72rem;
+    color: var(--dim);
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.counter-item .c-val {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: 'Space Mono', monospace;
+    transition: transform .12s;
+}
+
+/* =============================================
+     ปุ่มกดในเกม
+     ============================================= */
+.buttons-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.game-btn {
+    width: 110px;
+    height: 64px;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .08s, filter .08s;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: .5px;
+}
+
+.game-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, .12);
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.game-btn:hover::after {
+    opacity: 1;
+}
+
+.game-btn:active {
+    transform: scale(.93);
+    filter: brightness(.85);
+}
+
+/* สีปุ่มแต่ละทิศ */
+.game-btn.left {
+    background: var(--btn-left);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, .4);
+}
+
+.game-btn.right {
+    background: var(--btn-right);
+    box-shadow: 0 4px 20px rgba(168, 85, 247, .4);
+}
+
+.game-btn.up {
+    background: var(--btn-up);
+    box-shadow: 0 4px 20px rgba(34, 211, 238, .4);
+}
+
+.game-btn.down {
+    background: var(--btn-down);
+    box-shadow: 0 4px 20px rgba(249, 115, 22, .4);
+}
+
+.game-btn.single {
+    background: linear-gradient(135deg, #00e5a0, #00b4d8);
+    box-shadow: 0 4px 20px rgba(0, 229, 160, .4);
+    color: #07070f;
+    width: 160px;
+    height: 72px;
+    font-size: 1.15rem;
+}
+
+/* ปุ่ม confirm */
+#confirm-btn {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--easy);
+    border-radius: var(--radius);
+    color: var(--easy);
+    font-family: 'Prompt', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background .15s, color .15s;
+}
+
+#confirm-btn:hover {
+    background: var(--easy);
+    color: #07070f;
+}
+
+/* =============================================
+     RESULT OVERLAY (popup แพ้/ผ่าน)
+     ============================================= */
+#result-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 7, 15, .88);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    animation: fadeUp .3s ease;
+}
+
+#result-overlay.show {
+    display: flex;
+}
+
+.result-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px 36px;
+    text-align: center;
+    max-width: 360px;
+    width: 90%;
+}
+
+.result-icon {
+    font-size: 4rem;
+    margin-bottom: 12px;
+}
+
+.result-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.result-sub {
+    font-size: .95rem;
+    color: #aaaacc;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.result-score {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--easy);
+    margin-bottom: 24px;
+}
+
+/* =============================================
+     WIN SCREEN
+     ============================================= */
+.win-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.win-score {
+    font-size: 1.2rem;
+    color: var(--easy);
+    font-weight: 700;
+}
+
+.win-stars {
+    font-size: 3rem;
+    letter-spacing: 8px;
+}
+
+/* Animation กระพริบแดงเมื่อเวลาน้อย */
+@keyframes pulse-red {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 61, 110, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(255, 61, 110, .3);
+    }
+}
+
+.danger {
+    animation: pulse-red .6s infinite;
+}
+
+/* Animation สั่นเมื่อแพ้ */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-8px);
+    }
+
+    40% {
+        transform: translateX(8px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shake .4s ease;
+}

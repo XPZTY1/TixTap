@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TixTap!</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- ==================== START SCREEN ==================== -->
+    <div class="screen active" id="screen-start">
+      <div class="logo">
+        Tix<span>Tap</span>!
+        <span class="sub">REACTION CHALLENGE</span>
+      </div>
+
+      <div class="badge-row">
+        <span class="badge easy">🟢 ง่าย × 10</span>
+        <span class="badge mid">🟡 กลาง × 10</span>
+        <span class="badge hard">🔴 ยาก × 10</span>
+      </div>
+
+      <div class="rules-box">
+        <strong>วิธีเล่น</strong><br>
+        อ่านคำสั่งแล้วกดปุ่มให้ถูกต้องภายในเวลา<br><br>
+        🟢 <strong>ง่าย</strong> — 1 ปุ่ม / เวลา <span id="time-easy">8</span> วิ<br>
+        🟡 <strong>กลาง</strong> — 2 ปุ่ม (ซ้าย/ขวา) / เวลา <span id="time-mid">6</span> วิ<br>
+        🔴 <strong>ยาก</strong> — 4 ปุ่ม (ซ้าย/ขวา/บน/ล่าง) / เวลา <span id="time-hard">4</span> วิ<br><br>
+        ผิดหรือหมดเวลา = <strong style="color:var(--hard)">กลับด่าน 1 ทันที!</strong>
+      </div>
+
+      <button class="btn-primary" onclick="startGame()">▶ เริ่มเกม</button>
+    </div>
+
+    <!-- ==================== GAME SCREEN ==================== -->
+    <div class="screen" id="screen-game">
+      <div class="hud">
+        <span class="hud-level" id="hud-level">ด่าน 1 / 10</span>
+        <span class="hud-score" id="hud-score">คะแนน: 0</span>
+      </div>
+
+      <div class="timer-wrap">
+        <div id="timer-bar"></div>
+      </div>
+
+      <div class="instruction-box">
+        <div>
+          <div id="instruction-text">กำลังโหลด...</div>
+          <div style="text-align:center;margin-top:8px">
+            <span id="level-badge"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="counters" id="counters-wrap"></div>
+      <div class="buttons-wrap" id="buttons-wrap"></div>
+
+      <button id="confirm-btn" onclick="confirmAnswer()">✔ ยืนยันคำตอบ</button>
+    </div>
+
+    <!-- ==================== WIN SCREEN ==================== -->
+    <div class="screen" id="screen-win">
+      <div class="win-stars">⭐⭐⭐</div>
+      <div class="win-title">ผ่านทุกด่าน!!</div>
+      <div class="win-score" id="win-score-text"></div>
+      <div class="rules-box" style="text-align:center;color:#aaaacc">
+        เก่งมากเลย! กดปุ่มทุกอย่างถูกต้องครบ 10 ด่าน
+      </div>
+      <button class="btn-primary" onclick="startGame()">🔄 เล่นอีกครั้ง</button>
+    </div>
+
+  </div>
+
+  <!-- ==================== RESULT OVERLAY ==================== -->
+  <div id="result-overlay">
+    <div class="result-box" id="result-box">
+      <div class="result-icon" id="result-icon"></div>
+      <div class="result-title" id="result-title"></div>
+      <div class="result-sub" id="result-sub"></div>
+      <div class="result-score" id="result-score"></div>
+      <button class="btn-primary" id="result-btn" onclick="handleResultBtn()"></button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
