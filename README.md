@@ -4,7 +4,7 @@
 
 <p align="center">
   <b>Reaction Challenge Game</b><br>
-  เกมวัดความเร็วในการตอบสนอง ⚡
+  เกมวัดความเร็วในการตอบสนอง⚡
 </p>
 
 <p align="center">
