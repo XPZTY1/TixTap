@@ -39,19 +39,19 @@
 <tr>
 <td>🟢 Easy</td>
 <td>1 Button</td>
-<td>8 Seconds</td>
+<td>5 Seconds</td>
 </tr>
 
 <tr>
 <td>🟡 Medium</td>
 <td>Left / Right</td>
-<td>6 Seconds</td>
+<td>7 Seconds</td>
 </tr>
 
 <tr>
 <td>🔴 Hard</td>
 <td>Left / Right / Up / Down</td>
-<td>4 Seconds</td>
+<td>9 Seconds</td>
 </tr>
 
 </table>
