@@ -70,13 +70,13 @@
 
 ---
 
-## 📸 Preview
+## 📸 How to play
 
 <div align="center">
 
 ```txt
 TixTap!
-REACTION CHALLENGE
+อ่านคำสั่งแล้วกดปุ่มให้ถูกต้องภายในเวลา
 
 🟢 ง่าย × 10
 🟡 กลาง × 10
