@@ -413,7 +413,6 @@ function showResult(win, q) {
         document.getElementById('result-sub').innerHTML =
             `คำตอบผิด! <br><small style="color:var(--mid)">💡 ${q.hint}</small>`;
         document.getElementById('result-btn').textContent = '🔄 เริ่มใหม่';
-        document.getElementById('result-btnH').textContent = '⏹️ กลับหน้าแรก';
         state.resultAction = 'restart';
 
         // Animation สั่นเมื่อแพ้
