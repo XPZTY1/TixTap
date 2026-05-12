@@ -490,9 +490,10 @@ function updateRulesTime() {
 
 function clickOn() {
     const click = document.getElementById("click");
-    click.pause();
-    click.currentTime = 0.35;
-    click.play();
+
+    const click_ = click.cloneNode();
+    click_.currentTime = 0.35;
+    click_.play();
 }
 
 
