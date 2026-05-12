@@ -490,6 +490,7 @@ function updateRulesTime() {
 
 function clickOn() {
     const click = document.getElementById("click");
+    click.pause();
     click.currentTime = 0.35;
     click.play();
 }
@@ -497,18 +498,21 @@ function clickOn() {
 
 function ClickPlaySound() {
     const click_play = document.getElementById("click-play");
+    click_play.pause();
     click_play.currentTime = 0.45;
     click_play.play();
 }
 
 function incorrectSound() {
     const incorrect = document.getElementById("incorrect");
+    incorrect.pause();
     incorrect.currentTime = 0;
     incorrect.play();
 }
 
 function correctSound() {
     const correct = document.getElementById("correct");
+    correct.pause();
     correct.currentTime = 0;
     correct.play();
 }
