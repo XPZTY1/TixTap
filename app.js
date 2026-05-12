@@ -409,7 +409,7 @@ function showResult(win, q) {
         correctSound();
         state.resultAction = 'next';
     } else {
-        incorrectSound();
+        
         document.getElementById('result-sub').innerHTML =
             `คำตอบผิด! <br><small style="color:var(--mid)">💡 ${q.hint}</small>`;
         document.getElementById('result-btn').textContent = '🔄 เริ่มใหม่';
@@ -420,6 +420,7 @@ function showResult(win, q) {
         box.classList.remove('shake');
         void box.offsetWidth; // force reflow
         box.classList.add('shake');
+        incorrectSound();
         
     }
 
