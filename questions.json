@@ -555,5 +555,50 @@
       "value": 2
     },
     "hint": "งูมีขาหรอ"
+  },
+  {
+    "id": 31,
+    "level": "hard",
+    "text": "อย่า<span class='highlight'>ไม่กด</span>",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 1
+    },
+    "hint": "ก็บอกว่าอย่าไม่กดไงง"
+  },
+  {
+    "id": 32,
+    "level": "hard",
+    "text": "กด <span class='highlight'>ขวา</span> แต่ห้ามกดขวา",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 0
+    },
+    "hint": "ก็บอกว่าอย่าไง ไม่ได้บอกให้กด"
+  },
+  {
+    "id": 33,
+    "level": "hard",
+    "text": "คำตอบอยู่ตรงนี้ <span class='highlight'> → ←",
+    "buttons": [
+      "single"
+    ],
+    "time": 5,
+    "condition": {
+      "type": "exact",
+      "key": "single",
+      "value": 0
+    },
+    "hint": "คำตอบก็คือไม่มีไง"
   }
 ]

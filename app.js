@@ -48,6 +48,7 @@ async function loadQuestions() {
         console.log(`โหลดคำถามสำเร็จ: ${QUESTIONS.length} ข้อ`);
         updateRulesTime(); // อัปเดตเวลาใน rules box ให้ตรงกับ TIME_CONFIG
         document.getElementById('all-level').textContent = `${TOTAL_LEVELS}`;
+        updateRulesLevel();
     } catch (err) {
         console.error('โหลด questions.json ไม่สำเร็จ:', err);
         alert('ไม่พบไฟล์ questions.json กรุณาวางไฟล์ไว้ในโฟลเดอร์เดียวกัน');
@@ -495,10 +496,29 @@ function updateRulesTime() {
 }
 
 
+/* ============================================================
+   อัปเดตข้อความเวลาใน rules box ให้ตรงกับ level
+   เรียกครั้งเดียวตอน loadQuestions สำเร็จ
+   ถ้าแก้ level แล้ว rules box จะอัปเดตอัตโนมัติ
+   ============================================================ */
+
+async function updateRulesLevel() {
+    const count = level =>
+        QUESTIONS.filter(q => q.level === level).length;
+
+    console.log(`ง่าย : ${count("easy")} | กลาง : ${count("mid")} | ยาก : ${count("hard")}`);
+    document.getElementById("level-easy").textContent = count("easy");
+    document.getElementById("level-mid").textContent = count("mid");
+    document.getElementById("level-hard").textContent = count("hard");
+}
+
+
 
 
 /* ============================================================
+
    เล่นเสียง
+
    ============================================================ */
 
 
