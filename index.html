@@ -24,7 +24,7 @@
     <div class="screen active" id="screen-start">
       <div class="logo">
         Tix<span>Tap</span>!
-        <span class="sub">REACTION CHALLENGE <p class="verstion">2.2.0</p></span>
+        <span class="sub">REACTION CHALLENGE <p class="verstion">3.1.0</p></span>
       </div>
 
       <div class="badge-row">
@@ -34,17 +34,17 @@
       </div>
 
       <div class="rules-box">
-
+        <p class="footer">Punyapat Kongwoon</p>
         <strong>วิธีเล่น</strong><br>
         จำนวนด่าน <span id="all-level"></span> ด่าน<br>
         คำสั่งแบบสุ่ม อ่านคำสั่งแล้วกดปุ่มให้ถูกต้องภายในเวลา<br><br>
 
 
-        🟢 <strong>ง่าย</strong> — 1 ปุ่ม / เวลา <span id="time-easy"></span> วิ<br>
-        🟡 <strong>กลาง</strong> — 2 ปุ่ม (ซ้าย/ขวา) / เวลา <span id="time-mid"></span> วิ<br>
-        🔴 <strong>ยาก</strong> — 4 ปุ่ม (ซ้าย/ขวา/บน/ล่าง) / เวลา <span id="time-hard"></span> วิ<br><br>
-        ผิดหรือหมดเวลา = <strong style="color:var(--hard)">กลับด่าน 1 ทันที!</strong>
-
+        🟢 <strong>ง่าย</strong> เวลา <span id="time-easy"></span> วิ<br>
+        🟡 <strong>กลาง</strong> เวลา <span id="time-mid"></span> วิ<br>
+        🔴 <strong>ยาก</strong> เวลา <span id="time-hard"></span> วิ<br><br>
+        ผิด = <strong style="color:var(--hard)">กลับด่าน 1 ทันที!</strong><br>
+        
 
       </div>
 
@@ -90,6 +90,7 @@
       <button class="btn-primary" onclick="location.reload()">⏹️ กลับหน้าแรก</button>
     </div>
 
+    
   </div>
 
   <!-- ==================== RESULT OVERLAY ==================== -->
@@ -102,6 +103,8 @@
       <button class="btn-primary" id="result-btn" onclick="handleResultBtn()"></button>
     </div>
   </div>
+
+
 
   <script src="app.js"></script>
 </body>

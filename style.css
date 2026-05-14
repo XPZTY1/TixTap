@@ -539,3 +539,9 @@ body::before {
     font-size: small;
     color: #eff5f696;
 }
+
+.footer{
+    color: #ffffff49;
+    font-size: 10px;
+    text-align: end;
+}
